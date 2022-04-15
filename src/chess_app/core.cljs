@@ -1,3 +1,5 @@
+;; First attempt at building a browser-based Chess game.
+
 (ns chess-app.core
   (:require
     [clojure.pprint :as pprint]
@@ -7,19 +9,6 @@
 (enable-console-print!)
 
 (println "This text is printed from src/chess-app/core.cljs. Go ahead and edit it and see reloading in action.")
-
-;; define your app data so that it doesn't get over-written on reload
-
-; (def app-state (atom [[:div[:img {:src "Chess_rlt45.svg"}] "T" "H" "B" "Q" "K" "B" "H" "T"]
-;                      ["S" "S" "S" "S" "S" "S" "S" "S"]
-;                      [nil nil nil nil nil nil nil nil]
-;                      [nil nil nil nil nil nil nil nil]
-;                      [nil nil nil nil nil nil nil nil]
-;                      [nil nil nil nil nil nil nil nil]
-;                      ["S" "S" "S" "S" "S" "S" "S" "S"]
-;                      ["T" "H" "B" "Q" "K" "B" "H" "T"]]))
-;[:div [:img {:src ""}]]
-; (defn move [] -> (assoc-in @app-state [0 1] 0) (assoc-in @app-state [0 2] "p"))
 
 (def app-state
   (reagent/atom
