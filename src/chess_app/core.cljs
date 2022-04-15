@@ -10,16 +10,7 @@
 
 (println "This text is printed from src/chess-app/core.cljs. Go ahead and edit it and see reloading in action.")
 
-(def app-state
-  (reagent/atom
-    {:board [[{:figure "T" :player 0} {:figure "H" :player 0} {:figure "B" :player 0} {:figure "Q" :player 0} {:figure "K" :player 0} {:figure "B" :player 0} {:figure "H" :player 0} {:figure "T" :player 0}]
-             [{:figure "P" :player 0} {:figure "P" :player 0} {:figure "P" :player 0} {:figure "P" :player 0} {:figure "P" :player 0} {:figure "P" :player 0} {:figure "P" :player 0} {:figure "P" :player 0}]
-             [nil nil nil nil nil nil nil nil]
-             [nil nil nil nil nil nil nil nil]
-             [nil nil nil nil nil nil nil nil]
-             [nil nil nil nil nil nil nil nil]
-             [{:figure "P" :player 1} {:figure "P" :player 1} {:figure "P" :player 1} {:figure "P" :player 1} {:figure "P" :player 1} {:figure "P" :player 1} {:figure "P" :player 1} {:figure "P" :player 1}]
-             [{:figure "T" :player 1} {:figure "H" :player 1} {:figure "B" :player 1} {:figure "Q" :player 1} {:figure "K" :player 1} {:figure "B" :player 1} {:figure "H" :player 1} {:figure "T" :player 1}]]}))
+
 
 (defn is-valid? [{:keys [figure player]} start-path end-path]
   (and (= figure "P") (= player 0))
